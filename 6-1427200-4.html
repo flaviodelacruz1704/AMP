@@ -16,6 +16,113 @@
 
 <body class="bg-gray-50 font-sans">
 
+<nav class="bg-white w-full shadow-md border sticky top-0 z-40">
+    <div class="container mx-auto px-4">
+      <div class="hidden lg:flex justify-between items-center py-4">
+        <div class="flex items-center">
+          <a href="index.html">
+            <img src="https://www.ds3comunicaciones.com/mikrotik/images/Logo1.jpg" alt="NetPeru Logo" class="h-12 mr-3" />
+          </a>
+        </div>
+
+        <div class="flex space-x-8 text-black">
+          <div class="flex items-center">
+            <i class="fas fa-phone-alt mr-2 text-black"></i>
+            <div>
+              <p class="text-sm font-bold">533-4339</p>
+              <p class="text-sm font-bold">994-428-965</p>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <i class="fas fa-phone-alt mr-2 text-black"></i>
+            <div>
+              <p class="text-sm font-bold">99653-3223</p>
+              <p class="text-sm font-bold">937-514-867</p>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <i class="fas fa-envelope mr-2 text-black"></i>
+            <span class="text-sm font-bold">netperu100@hotmail.com</span>
+          </div>
+          <div class="flex items-center">
+            <i class="fas fa-map-marker-alt mr-2 text-black"></i>
+            <span class="text-sm font-bold">Lima, PERÚ</span>
+          </div>
+          <div>
+            <img src="https://www.ds3comunicaciones.com/cisco/images/cisco-gif.gif" alt="cisco" class="h-10" />
+          </div>
+        </div>
+
+        <div class="flex items-center">
+          <button id="search-button" class="p-2 rounded-full hover:bg-gray-100 transition-colors">
+            <i class="fas fa-search text-black"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="lg:hidden flex flex-col gap-2">
+        <div class="flex justify-between items-center py-2">
+          <div class="flex gap-1">
+            <button id="mobile-menu-button" class="p-2 rounded-full hover:bg-gray-300 transition-colors">
+              <i class="fas fa-bars text-black"></i>
+            </button>
+            <div class="flex items-center gap-2">
+              <img src="https://www.ds3comunicaciones.com/mikrotik/images/Logo1.jpg" alt="Logo" class="h-10" />
+              <img src="http://www.ds3comunicaciones.com/cisco/images/logo-cisco.gif" alt="Cisco" class="h-8" />
+            </div>
+          </div>
+          <button id="mobile-search-button" class="p-2 rounded-md hover:bg-gray-300 transition-colors border border-black flex gap-3 items-center">
+            <i class="fas fa-search text-black"></i>
+          </button>
+        </div>
+        
+        <div class="py-2 pl-3 text-xs">
+          <div class="flex items-start">
+              <i class="fas fa-phone-alt mt-1 mr-1"></i> 996533223
+              <i class="fas fa-phone-alt mt-1 ml-4 mr-1"></i> 994428965
+          </div>
+          <div class="flex items-center mt-1">
+              <i class="fas fa-envelope mr-1"></i> netperu100@hotmail.com
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 transform -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto">
+      <div class="flex justify-end p-4">
+        <button id="close-menu" class="text-gray-500 hover:text-gray-700">
+          <i class="fas fa-times text-2xl"></i>
+        </button>
+      </div>
+      <div class="px-6 pb-8">
+        <div class="mb-4">
+          <a href="https://www.ds3comunicaciones.com/AMP/index.html" class="border-b w-full block py-2 font-medium text-blue-500">Productos AMP</a>
+          <a href="https://www.ds3comunicaciones.com/AMP/precios_amp.html" class="border-b w-full block py-2 font-medium text-blue-500">Lista de Precios</a>
+        </div>
+        <div class="mt-4">
+           <h3 class="font-bold border-b pb-1 mb-2">Contacto</h3>
+           <p class="text-sm"><i class="fas fa-phone mr-2"></i> 533-4339</p>
+           <p class="text-sm"><i class="fas fa-envelope mr-2"></i> netperu100@hotmail.com</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
+  </nav>
+
+  <section id="search-modal" class="hidden fixed top-0 left-0 right-0 bottom-0 h-screen w-full px-5 pt-7 z-50" style="background-color: rgba(0, 0, 0, 0.6)">
+    <div class="max-w-[600px] mx-auto flex gap-2 justify-between">
+      <form action="https://www.ds3comunicaciones.com/find.html" class="flex items-center w-full bg-white rounded-md p-1">
+        <i class="fa-solid fa-magnifying-glass ps-2 text-gray-500"></i>
+        <input name="q" type="text" class="outline-none px-3 py-3 w-full" placeholder="Buscar..." required />
+        <input type="submit" value="Buscar" class="bg-blue-600 text-white px-4 py-2 rounded-md cursor-pointer hover:bg-blue-700 transition" />
+      </form>
+      <button id="close-search" class="text-white text-2xl w-10 hover:text-gray-300">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+  </section>
+
   <div id="navbar-container"></div>
 
   <nav class="bg-white border-b border-gray-200 shadow-sm sticky top-0 z-30">
@@ -698,5 +805,6 @@
   </footer>
   <script src="./js/change_tabs.js"></script>
 </body>
+
 
 </html>
